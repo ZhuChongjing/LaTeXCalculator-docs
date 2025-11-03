@@ -1,0 +1,42 @@
+print_help
+==========
+
+.. autofunction:: LaTeXCalculator.print_help
+
+Description
+-----------
+
+It will print the help message for the interactive calculator.
+
+Just like that:
+
+.. code-block:: 
+
+                                                         LaTeX Syntax & Commands
+   ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+   ┃ Category                  ┃ Details                                  ┃ Example/Description                                         ┃
+   ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+   │ Supported LaTeX Syntax    │ Arithmetic                               │ +, -, \times, \cdot, \div                                   │
+   │                           │ Fractions                                │ \frac{numerator}{denominator}                               │
+   │                           │ Square Roots                             │ \sqrt{expression}, \sqrt{expression}                        │
+   │                           │ Exponents                                │ ^{exponent}                                                 │
+   │                           │ Functions                                │ \sin, \cos, \tan, \log, \ln, \exp, etc.                     │
+   │                           │ Constants                                │ \pi, \e, \infty                                             │
+   │                           │ Greek Letters                            │ \alpha, \beta, \gamma, etc.                                 │
+   │                           │ Combinatorial Numbers                    │ \binom{n}{k}                                                │
+   ├───────────────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+   │ Equation Solving          │ Single Equation                          │ x^2 - 4 = 0                                                 │
+   │                           │ System of Equations                      │ x + y = 5, x - y = 1 (use comma to separate equations)      │
+   ├───────────────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+   │ Calculus                  │ Derivative                               │ Input expression, optional variable (default x)             │
+   │                           │ Integral                                 │ Input expression, optional variable (default x)             │
+   │                           │ Limit                                    │ Input expression, optional variable and point (default x→0) │
+   ├───────────────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+   │ Commands                  │ help                                     │ Display this help                                           │
+   │                           │ solve                                    │ Enter equation solving mode                                 │
+   │                           │ calc                                     │ Return to calculation mode                                  │
+   │                           │ derivative                               │ Enter derivative mode                                       │
+   │                           │ integral                                 │ Enter integral mode                                         │
+   │                           │ limit                                    │ Enter limit mode                                            │
+   │                           │ quit                                     │ Exit                                                        │
+   └───────────────────────────┴──────────────────────────────────────────┴─────────────────────────────────────────────────────────────┘
