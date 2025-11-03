@@ -1,7 +1,0 @@
-LaTeXDerivativeCalculator
-=========================
-
-.. autoclass:: LaTeXCalculator.LaTeXDerivativeCalculator
-   :members:
-   :undoc-members:
-   :show-inheritance:
