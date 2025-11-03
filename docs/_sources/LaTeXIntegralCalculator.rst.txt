@@ -1,0 +1,7 @@
+LaTeXIntegralCalculator
+=========================
+
+.. autoclass:: LaTeXCalculator.LaTeXIntegralCalculator
+   :members:
+   :undoc-members:
+   :show-inheritance:
