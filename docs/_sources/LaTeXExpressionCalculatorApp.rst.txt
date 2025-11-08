@@ -1,0 +1,6 @@
+LaTeXExpressionCalculatorApp
+============================
+
+.. autoclass:: LaTeXCalculator.LaTeXExpressionCalculatorApp
+   :members:
+   :undoc-members:

@@ -1,0 +1,42 @@
+Calculators
+===========
+
+.. grid:: 1 1 2 2
+   :gutter: 1
+
+   .. grid-item-card:: :doc:`LaTeXExpressionCalculator`
+
+      A class for calculating LaTeX expressions, 
+      including :bdg-primary-line:`numerical` evaluation, :bdg-success-line:`symbolic` simplification, 
+      and :bdg-warning-line:`variable` substitution.
+
+   .. grid-item-card:: :doc:`LaTeXEquationSolver`
+
+      A class for solving LaTeX equations, 
+      including :bdg-primary-line:`numerical` solutions and :bdg-success-line:`symbolic` solutions.
+
+   .. grid-item-card:: :doc:`LaTeXSystemSolver`
+
+      A class for solving systems of LaTeX equations, 
+      including :bdg-primary-line:`numerical` solutions and :bdg-success-line:`symbolic` solutions.
+
+   .. grid-item-card:: :doc:`LaTeXIntegralCalculator`
+
+      A class for computing integrals of LaTeX expressions, 
+      including :bdg-primary-line:`numerical` integration and :bdg-success-line:`symbolic` integration.
+
+   .. grid-item-card:: :doc:`LaTeXDerivativeCalculator`
+
+      A class for computing derivatives of LaTeX expressions, 
+      including :bdg-primary-line:`numerical` differentiation and :bdg-success-line:`symbolic` differentiation.
+
+   .. grid-item-card:: :doc:`LaTeXLimitCalculator`
+
+      A class for computing limits of LaTeX expressions, 
+      including :bdg-primary-line:`numerical` evaluation and :bdg-success-line:`symbolic` evaluation.
+
+   .. grid-item-card:: :doc:`LaTeXExpressionCalculatorApp`
+
+      A class for interactive LaTeX expression calculation, 
+      including :bdg-primary-line:`numerical` evaluation, :bdg-success-line:`symbolic` simplification, 
+      and :bdg-warning-line:`variable` substitution.

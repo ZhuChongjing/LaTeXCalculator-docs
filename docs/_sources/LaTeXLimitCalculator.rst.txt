@@ -1,0 +1,7 @@
+LaTeXLimitCalculator
+====================
+
+.. autoclass:: LaTeXCalculator.LaTeXLimitCalculator
+   :members:
+   :undoc-members:
+   :show-inheritance:
