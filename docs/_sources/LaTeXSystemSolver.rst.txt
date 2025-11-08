@@ -1,7 +1,0 @@
-LaTeXSystemSolver
-=========================
-
-.. autoclass:: LaTeXCalculator.LaTeXSystemSolver
-   :members:
-   :undoc-members:
-   :show-inheritance:

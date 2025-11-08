@@ -1,7 +1,0 @@
-LaTeXExpressionCalculator
-=========================
-
-.. autoclass:: LaTeXCalculator.LaTeXExpressionCalculator
-   :members:
-   :undoc-members:
-   :show-inheritance:
