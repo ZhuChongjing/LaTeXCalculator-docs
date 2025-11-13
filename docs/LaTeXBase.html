@@ -2,12 +2,14 @@
 <html class="no-js" lang="en" data-content_root="./">
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#"><link rel="search" title="Search" href="search.html">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html">
         <link rel="prefetch" href="_static/logo-light-mode.png" as="image">
         <link rel="prefetch" href="_static/logo-dark-mode.png" as="image">
 
-    <link rel="shortcut icon" href="_static/favicon.ico"><!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 --><title>Index - LaTeXCalculator v1.0.1</title>
-<link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="shortcut icon" href="_static/favicon.ico"><!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
+        <title>LaTeXBase - LaTeXCalculator v1.0.1</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -175,7 +177,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -229,7 +231,13 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/LaTeXBase.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
               <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
@@ -237,146 +245,44 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          
-<section class="genindex-section">
-  <h1 id="index">Index</h1>
-  <div class="genindex-jumpbox"><a href="#A"><strong>A</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#S"><strong>S</strong></a></div>
+          <section id="latexbase">
+<h1>LaTeXBase<a class="headerlink" href="#latexbase" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="LaTeXCalculator.LaTeXBase">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">LaTeXCalculator.</span></span><span class="sig-name descname"><span class="pre">LaTeXBase</span></span><a class="reference internal" href="_modules/LaTeXCalculator/calculator.html#LaTeXBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#LaTeXCalculator.LaTeXBase" title="Link to this definition">¶</a></dt>
+<dd><p>LaTex Calculator Base Class with shared functionalities and constants.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="LaTeXCalculator.LaTeXBase.preprocess_latex">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocess_latex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latex_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/LaTeXCalculator/calculator.html#LaTeXBase.preprocess_latex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#LaTeXCalculator.LaTeXBase.preprocess_latex" title="Link to this definition">¶</a></dt>
+<dd><p>Preprocess LaTeX string to make it recognizable by SymPy.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LaTeXCalculator.LaTeXBase.extract_variables">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expression_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span></span></span><a class="reference internal" href="_modules/LaTeXCalculator/calculator.html#LaTeXBase.extract_variables"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#LaTeXCalculator.LaTeXBase.extract_variables" title="Link to this definition">¶</a></dt>
+<dd><p>Get all variables in the expression.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LaTeXCalculator.LaTeXBase.parse_latex_expression">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_latex_expression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latex_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Expr</span></span></span><a class="reference internal" href="_modules/LaTeXCalculator/calculator.html#LaTeXBase.parse_latex_expression"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#LaTeXCalculator.LaTeXBase.parse_latex_expression" title="Link to this definition">¶</a></dt>
+<dd><p>Parse a LaTeX expression into a SymPy expression.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LaTeXCalculator.LaTeXBase.evaluate_expression">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluate_expression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numeric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Expr</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span></span></span><a class="reference internal" href="_modules/LaTeXCalculator/calculator.html#LaTeXBase.evaluate_expression"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#LaTeXCalculator.LaTeXBase.evaluate_expression" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluate the expression.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="A" class="genindex-section">
-  <h2>A</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="LaTeXExpressionCalculator.html#LaTeXCalculator.LaTeXExpressionCalculator.add_variable">add_variable() (LaTeXCalculator.LaTeXExpressionCalculator method)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="C" class="genindex-section">
-  <h2>C</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="LaTeXDerivativeCalculator.html#LaTeXCalculator.LaTeXDerivativeCalculator.calculate">calculate() (LaTeXCalculator.LaTeXDerivativeCalculator method)</a>
-
-        <ul>
-          <li><a href="LaTeXExpressionCalculator.html#LaTeXCalculator.LaTeXExpressionCalculator.calculate">(LaTeXCalculator.LaTeXExpressionCalculator method)</a>
-</li>
-          <li><a href="LaTeXExpressionCalculatorApp.html#LaTeXCalculator.LaTeXExpressionCalculatorApp.calculate">(LaTeXCalculator.LaTeXExpressionCalculatorApp method)</a>
-</li>
-          <li><a href="LaTeXIntegralCalculator.html#LaTeXCalculator.LaTeXIntegralCalculator.calculate">(LaTeXCalculator.LaTeXIntegralCalculator method)</a>
-</li>
-          <li><a href="LaTeXLimitCalculator.html#LaTeXCalculator.LaTeXLimitCalculator.calculate">(LaTeXCalculator.LaTeXLimitCalculator method)</a>
-</li>
-        </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="LaTeXExpressionCalculatorApp.html#LaTeXCalculator.LaTeXExpressionCalculatorApp.calculate_derivative">calculate_derivative() (LaTeXCalculator.LaTeXExpressionCalculatorApp method)</a>
-</li>
-        <li><a href="LaTeXExpressionCalculatorApp.html#LaTeXCalculator.LaTeXExpressionCalculatorApp.calculate_integral">calculate_integral() (LaTeXCalculator.LaTeXExpressionCalculatorApp method)</a>
-</li>
-        <li><a href="LaTeXExpressionCalculatorApp.html#LaTeXCalculator.LaTeXExpressionCalculatorApp.calculate_limit">calculate_limit() (LaTeXCalculator.LaTeXExpressionCalculatorApp method)</a>
-</li>
-        <li><a href="LaTeXExpressionCalculator.html#LaTeXCalculator.LaTeXExpressionCalculator.calculate_multiple">calculate_multiple() (LaTeXCalculator.LaTeXExpressionCalculator method)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="E" class="genindex-section">
-  <h2>E</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="LaTeXBase.html#LaTeXCalculator.LaTeXBase.evaluate_expression">evaluate_expression() (LaTeXCalculator.LaTeXBase static method)</a>
-</li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="LaTeXBase.html#LaTeXCalculator.LaTeXBase.extract_variables">extract_variables() (LaTeXCalculator.LaTeXBase static method)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="I" class="genindex-section">
-  <h2>I</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="interactive_calculator.html#LaTeXCalculator.interactive_calculator">interactive_calculator() (in module LaTeXCalculator)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="L" class="genindex-section">
-  <h2>L</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="LaTeXBase.html#LaTeXCalculator.LaTeXBase">LaTeXBase (class in LaTeXCalculator)</a>
-</li>
-        <li><a href="LaTeXDerivativeCalculator.html#LaTeXCalculator.LaTeXDerivativeCalculator">LaTeXDerivativeCalculator (class in LaTeXCalculator)</a>
-</li>
-        <li><a href="LaTeXEquationSolver.html#LaTeXCalculator.LaTeXEquationSolver">LaTeXEquationSolver (class in LaTeXCalculator)</a>
-</li>
-        <li><a href="LaTeXExpressionCalculator.html#LaTeXCalculator.LaTeXExpressionCalculator">LaTeXExpressionCalculator (class in LaTeXCalculator)</a>
-</li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="LaTeXExpressionCalculatorApp.html#LaTeXCalculator.LaTeXExpressionCalculatorApp">LaTeXExpressionCalculatorApp (class in LaTeXCalculator)</a>
-</li>
-        <li><a href="LaTeXIntegralCalculator.html#LaTeXCalculator.LaTeXIntegralCalculator">LaTeXIntegralCalculator (class in LaTeXCalculator)</a>
-</li>
-        <li><a href="LaTeXLimitCalculator.html#LaTeXCalculator.LaTeXLimitCalculator">LaTeXLimitCalculator (class in LaTeXCalculator)</a>
-</li>
-        <li><a href="LaTeXSystemSolver.html#LaTeXCalculator.LaTeXSystemSolver">LaTeXSystemSolver (class in LaTeXCalculator)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="P" class="genindex-section">
-  <h2>P</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="LaTeXBase.html#LaTeXCalculator.LaTeXBase.parse_latex_expression">parse_latex_expression() (LaTeXCalculator.LaTeXBase static method)</a>
-</li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="LaTeXBase.html#LaTeXCalculator.LaTeXBase.preprocess_latex">preprocess_latex() (LaTeXCalculator.LaTeXBase static method)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="S" class="genindex-section">
-  <h2>S</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="LaTeXExpressionCalculator.html#LaTeXCalculator.LaTeXExpressionCalculator.set_variables">set_variables() (LaTeXCalculator.LaTeXExpressionCalculator method)</a>
-
-        <ul>
-          <li><a href="LaTeXExpressionCalculatorApp.html#LaTeXCalculator.LaTeXExpressionCalculatorApp.set_variables">(LaTeXCalculator.LaTeXExpressionCalculatorApp method)</a>
-</li>
-        </ul></li>
-        <li><a href="LaTeXEquationSolver.html#LaTeXCalculator.LaTeXEquationSolver.solve">solve() (LaTeXCalculator.LaTeXEquationSolver method)</a>
-
-        <ul>
-          <li><a href="LaTeXSystemSolver.html#LaTeXCalculator.LaTeXSystemSolver.solve">(LaTeXCalculator.LaTeXSystemSolver method)</a>
-</li>
-        </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="LaTeXExpressionCalculatorApp.html#LaTeXCalculator.LaTeXExpressionCalculatorApp.solve_equation">solve_equation() (LaTeXCalculator.LaTeXExpressionCalculatorApp method)</a>
-</li>
-        <li><a href="LaTeXExpressionCalculatorApp.html#LaTeXCalculator.LaTeXExpressionCalculatorApp.solve_system">solve_system() (LaTeXCalculator.LaTeXExpressionCalculatorApp method)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
 
         </article>
       </div>
@@ -410,8 +316,33 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">LaTeXBase</a><ul>
+<li><a class="reference internal" href="#LaTeXCalculator.LaTeXBase"><code class="docutils literal notranslate"><span class="pre">LaTeXBase</span></code></a><ul>
+<li><a class="reference internal" href="#LaTeXCalculator.LaTeXBase.preprocess_latex"><code class="docutils literal notranslate"><span class="pre">LaTeXBase.preprocess_latex()</span></code></a></li>
+<li><a class="reference internal" href="#LaTeXCalculator.LaTeXBase.extract_variables"><code class="docutils literal notranslate"><span class="pre">LaTeXBase.extract_variables()</span></code></a></li>
+<li><a class="reference internal" href="#LaTeXCalculator.LaTeXBase.parse_latex_expression"><code class="docutils literal notranslate"><span class="pre">LaTeXBase.parse_latex_expression()</span></code></a></li>
+<li><a class="reference internal" href="#LaTeXCalculator.LaTeXBase.evaluate_expression"><code class="docutils literal notranslate"><span class="pre">LaTeXBase.evaluate_expression()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

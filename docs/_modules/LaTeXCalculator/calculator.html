@@ -199,7 +199,16 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../Calculators.html">Calculators</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Calculators.html">Calculators</a><input aria-label="Toggle navigation of Calculators" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../LaTeXExpressionCalculator.html">LaTeXExpressionCalculator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../LaTeXEquationSolver.html">LaTeXEquationSolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../LaTeXSystemSolver.html">LaTeXSystemSolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../LaTeXIntegralCalculator.html">LaTeXIntegralCalculator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../LaTeXDerivativeCalculator.html">LaTeXDerivativeCalculator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../LaTeXLimitCalculator.html">LaTeXLimitCalculator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../LaTeXExpressionCalculatorApp.html">LaTeXExpressionCalculatorApp</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../interactive_calculator.html">Interactive Calculator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Help.html">Help</a></li>
 </ul>
@@ -245,6 +254,8 @@
 <span class="n">rich</span><span class="o">.</span><span class="n">traceback</span><span class="o">.</span><span class="n">install</span><span class="p">()</span>
 <span class="n">console</span> <span class="o">=</span> <span class="n">Console</span><span class="p">()</span>
 
+<div class="viewcode-block" id="LaTeXBase">
+<a class="viewcode-back" href="../../LaTeXBase.html#LaTeXCalculator.LaTeXBase">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LaTeXBase</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    LaTex Calculator Base Class with shared functionalities and constants.</span>
@@ -289,6 +300,8 @@
         <span class="s1">&#39;infty&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">),</span>
     <span class="p">}</span>
 
+<div class="viewcode-block" id="LaTeXBase.preprocess_latex">
+<a class="viewcode-back" href="../../LaTeXBase.html#LaTeXCalculator.LaTeXBase.preprocess_latex">[docs]</a>
     <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">preprocess_latex</span><span class="p">(</span><span class="n">latex_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -433,8 +446,11 @@
         <span class="n">latex_str</span> <span class="o">=</span> <span class="n">latex_str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\left\{&#39;</span><span class="p">,</span> <span class="s1">&#39;{&#39;</span><span class="p">)</span>
         <span class="n">latex_str</span> <span class="o">=</span> <span class="n">latex_str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\right\}&#39;</span><span class="p">,</span> <span class="s1">&#39;}&#39;</span><span class="p">)</span>
         
-        <span class="k">return</span> <span class="n">latex_str</span>
+        <span class="k">return</span> <span class="n">latex_str</span></div>
 
+
+<div class="viewcode-block" id="LaTeXBase.extract_variables">
+<a class="viewcode-back" href="../../LaTeXBase.html#LaTeXCalculator.LaTeXBase.extract_variables">[docs]</a>
     <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">extract_variables</span><span class="p">(</span><span class="n">expression_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">set</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -456,8 +472,11 @@
         <span class="n">words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">cleaned</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
         <span class="n">variables</span> <span class="o">=</span> <span class="n">words</span> <span class="o">-</span> <span class="n">protected</span>
         
-        <span class="k">return</span> <span class="n">variables</span>
+        <span class="k">return</span> <span class="n">variables</span></div>
 
+
+<div class="viewcode-block" id="LaTeXBase.parse_latex_expression">
+<a class="viewcode-back" href="../../LaTeXBase.html#LaTeXCalculator.LaTeXBase.parse_latex_expression">[docs]</a>
     <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">parse_latex_expression</span><span class="p">(</span><span class="n">latex_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">variable_values</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">sp</span><span class="o">.</span><span class="n">Expr</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -501,8 +520,11 @@
             <span class="k">return</span> <span class="n">expr</span>
             
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span></div>
 
+
+<div class="viewcode-block" id="LaTeXBase.evaluate_expression">
+<a class="viewcode-back" href="../../LaTeXBase.html#LaTeXCalculator.LaTeXBase.evaluate_expression">[docs]</a>
     <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">evaluate_expression</span><span class="p">(</span><span class="n">expr</span><span class="p">:</span> <span class="n">sp</span><span class="o">.</span><span class="n">Expr</span><span class="p">,</span> <span class="n">numeric</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">Expr</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">complex</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -523,7 +545,9 @@
                 <span class="c1"># symbolic evaluation (simplification)</span>
                 <span class="k">return</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Can&#39;t evaluate expression: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Can&#39;t evaluate expression: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+</div>
+
 
 <div class="viewcode-block" id="LaTeXExpressionCalculator">
 <a class="viewcode-back" href="../../LaTeXExpressionCalculator.html#LaTeXCalculator.LaTeXExpressionCalculator">[docs]</a>

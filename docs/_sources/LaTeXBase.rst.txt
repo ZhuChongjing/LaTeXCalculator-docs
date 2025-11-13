@@ -1,0 +1,5 @@
+LaTeXBase
+---------
+
+.. autoclass:: LaTeXCalculator.LaTeXBase
+   :members:
